@@ -10,6 +10,7 @@
   <version>0.0.1-SNAPSHOT</version>
   <modules>
     <module>dubbo-spi</module>
+    <module>dubbo-serviceinvoke</module>
   </modules>
 
   <dependencies>
