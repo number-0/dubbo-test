@@ -15,6 +15,8 @@ public class ProviderExportTest {
     public static void main(String[] args) throws IOException {
         ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("dubbo.xml");
 
+        context.getBean(ProviderExport.class);
+
         try {
             TimeUnit.SECONDS.sleep(Integer.MAX_VALUE);
         } catch (InterruptedException e) {

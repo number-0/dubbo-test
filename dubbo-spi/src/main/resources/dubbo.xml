@@ -17,9 +17,11 @@
   <dubbo:protocol name="dubbo" port="20880" />
 
 
-  <bean id="providerExportImpl" class="com.kl.dubbotest.provider.export.ProviderExportImpl"/>
+  <!--<bean id="providerExportImpl" class="com.kl.dubbotest.provider.export.ProviderExportImpl"/>-->
 
   <!-- 声明需要暴露的服务接口  写操作可以设置retries=0 避免重复调用SOA服务 -->
-  <dubbo:service interface="com.kl.dubbotest.provider.export.ProviderExport" ref="providerExportImpl" retries="0"/>
+  <!--<dubbo:service interface="com.kl.dubbotest.provider.export.ProviderExport" ref="providerExportImpl" retries="0"/>-->
 
+
+  <dubbo:reference interface="com.kl.dubbotest.provider.export.ProviderExport" id="providerExport" retries="0" check="false"/>
 </beans>
