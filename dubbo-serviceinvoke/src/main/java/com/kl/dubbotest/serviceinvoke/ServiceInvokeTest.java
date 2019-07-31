@@ -30,12 +30,30 @@ public class ServiceInvokeTest {
         ApplicationContext context = new ClassPathXmlApplicationContext("dubbo-consumer.xml");
         DemoService demoService = context.getBean(DemoService.class);
 
-        System.out.println(demoService.sayHello("mydubbodebug"));
+        for (;;) {
+            System.out.println(demoService.sayHello("mydubbodebug"));
 
-        try {
-            TimeUnit.SECONDS.sleep(Integer.MAX_VALUE);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
+            try {
+                TimeUnit.SECONDS.sleep(5);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+        }
+    }
+
+    @Test
+    public void serviceinvoke() {
+        ApplicationContext context = new ClassPathXmlApplicationContext("dubbo.xml");
+        DemoService demoService = context.getBean(DemoService.class);
+
+        for (;;) {
+            System.out.println(demoService.sayHello("mydubbodebug"));
+
+            try {
+                TimeUnit.SECONDS.sleep(5);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
         }
     }
 

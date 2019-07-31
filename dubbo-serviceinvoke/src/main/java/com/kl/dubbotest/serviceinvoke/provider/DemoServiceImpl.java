@@ -15,7 +15,7 @@ public class DemoServiceImpl implements DemoService {
     public String sayHello(String name) {
         Random random = new Random();
         try {
-            Thread.sleep(800 * random.nextInt(6));
+            Thread.sleep(1000 * random.nextInt(6));
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
